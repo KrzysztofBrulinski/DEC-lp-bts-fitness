@@ -9,13 +9,15 @@
     rel="stylesheet">
   <!--CSS-->
   <link rel="stylesheet" href="css/app.min.css">
+  <script src="https://www.decathlon.pl/ecpl/static/gliderjs/glider.min.js"></script>
+  <link rel="stylesheet" href="https://www.decathlon.pl/ecpl/static/gliderjs/glider.min.css">
   <title>decathlon.pl - Powrót do sportu!</title>
 </head>
 
 <body style="background-color: #f6f7f7">
 
   <section class="lp-bts-container">
-    <section class="kv-section">
+    <section class="lp-bts-container__kv-section">
       <div class="kv-section__main-kv dec-bg-img">
 
         <picture>
@@ -30,23 +32,97 @@
       </div>
     </section>
 
-    <section class="hp-section legginsy">
+    <section class="lp-bts-container__legginsy hp-section">
       <p class="hp-section__title">Legginsy</p>
 
       <div class="legginsy__carousel-container carousel">
 
-        <div class="carousel-container__item"></div>
+        <div class="carousel-container__item">
+          <a href="#">
+            <div class="item__title">bezszfowe</div>
+          </a>
+        </div>
 
+        <div class="carousel-container__item">
+          <a href="#">
+            <div class="item__title">bezszfowe</div>
+          </a>
+        </div>
+
+        <div class="carousel-container__item">
+          <a href="#">
+            <div class="item__title">bezszfowe</div>
+          </a>
+        </div>
+
+        <div class="carousel-container__item">
+          <a href="#">
+            <div class="item__title">bezszfowe</div>
+          </a>
+        </div>
+
+    </section>
+
+    <section class="lp-bts-container__polecamy hp-section">
+      <p class="hp-section__title">Polecamy</p>
+
+      <div class="polecamy__carousel-container carousel">
+
+        <div class="carousel-container__glider-container">
+          <a href="#">
+            <div class="carousel-container__item">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="carousel-container__item">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="carousel-container__item">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="carousel-container__item">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="carousel-container__item">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="carousel-container__item">
+            </div>
+          </a>
+
+        </div>
+
+        <button aria-label="Previous" class="polecamy-prev dec-carousel-arrow--prev"></button>
+        <button aria-label="Next" class="polecamy-next dec-carousel-arrow--next"></button>
 
       </div>
     </section>
 
-    <section class="hp-section">
-      <p class="hp-section__title">Polecamy</p>
-    </section>
-
-    <section class="hp-section">
+    <section class="lp-bts-container__video hp-section">
       <p class="hp-section__title">WOW WOW ALE SUPER VIDEO!</p>
+
+      <div class="video__video-container">
+        <div class="video-container__description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed,
+            lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque
+            semper justo at risus. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam
+            pellentesque aliquet tellus. </p>
+        </div>
+        <div class="video-container__video-box">
+          <iframe width="100%" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+          </iframe>
+        </div>
+      </div>
+
     </section>
 
     <section class="hp-section">
@@ -65,6 +141,75 @@
       <p class="hp-section__title">Ćwicz z Decathlon</p>
     </section>
   </section>
+
+
+  <script>
+    window.addEventListener('load', function () {
+
+      new Glider(document.querySelector('.legginsy__carousel-container'), {
+        // Mobile-first defaults
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        scrollLock: true,
+        draggable: true
+      });
+
+
+
+      // new Glider(document.querySelector('.carousel-container__glider-container'), {
+      //   // Mobile-first defaults
+      //   slidesToShow: 1,
+      //   slidesToScroll: 1,
+      //   scrollLock: true,
+      //   draggable: true,
+      //   arrows: {
+      //     prev: '.polecamy-prev',
+      //     next: '.polecamy-next'
+      //   },
+      //   responsive: [{
+      //     // screens greater than >= 700px
+      //     breakpoint: 700,
+      //     settings: {
+      //       slidesToShow: 2,
+      //       slidesToScroll: 1,
+      //       scrollLock: true,
+      //       draggable: true,
+      //       arrows: {
+      //         prev: '.polecamy-prev',
+      //         next: '.polecamy-next'
+      //       }
+      //     }
+      //   }, {
+      //     // screens greater than >= 900px
+      //     breakpoint: 900,
+      //     settings: {
+      //       slidesToShow: 3,
+      //       slidesToScroll: 1,
+      //       scrollLock: true,
+      //       draggable: true,
+      //       arrows: {
+      //         prev: '.polecamy-prev',
+      //         next: '.polecamy-next'
+      //       }
+      //     }
+      //   }, {
+      //     // screens greater than >= 1225px
+      //     breakpoint: 1225,
+      //     settings: {
+      //       slidesToShow: 4,
+      //       slidesToScroll: 1,
+      //       scrollLock: true,
+      //       draggable: false,
+      //       arrows: {
+      //         prev: '.polecamy-prev',
+      //         next: '.polecamy-next'
+      //       }
+      //     }
+      //   }]
+      // });
+
+    });
+  </script>
 
 </body>
 

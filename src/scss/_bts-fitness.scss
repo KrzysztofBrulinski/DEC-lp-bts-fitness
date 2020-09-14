@@ -18,10 +18,24 @@
     @include flex(center, column, wrap, flex-start);
 
 
-    .kv-section {
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+
+    p{
+        margin: 0;
+    }
+
+    .hp-section__title{
+        margin-top: 20px;
+    }
+
+
+    .lp-bts-container__kv-section {
         @include flex(center, column, wrap, flex-start);
 
-        .kv-section__main-kv{
+        .kv-section__main-kv {
             width: 100%;
             height: 400px;
             max-width: 1920px;
@@ -29,20 +43,85 @@
         }
     }
 
-    .carousel{
-        background-color: rgba(82, 82, 82, 0.246);
+    .carousel {
         @include flex(center, row, nowrap, flex-start);
+        background-color: #fff;
+        position: relative;
 
-        .carousel-container__item{
-            width: 340px;
-            height: 450px;
-            background-color: red;
+        .carousel-container__item {
+            @include flex(center, column, nowrap, center);
+
+            width: 280px;
+            height: 380px;
+            background-color: rgb(105, 105, 105);
+            text-align: center;
+            margin: 0 10px;
+            flex-shrink: 0;
+
+            .item__title {
+                font-family: $Geomanist-BoldItalic;
+                color: #fff;
+                font-size: 40px;
+            }
 
         }
     }
 
-    .legginsy__carousel-container{
-
+    .lp-bts-container__legginsy{
+        .legginsy__carousel-container {
+            
+        }
 
     }
+
+    .lp-bts-container__polecamy{
+        .polecamy__carousel-container{
+
+            .carousel-container__glider-container{
+                width: 100%;
+            }
+
+
+            .carousel-container__item{
+                height: 420px;
+            }
+        }
+    }
+
+    .lp-bts-container__video{
+        .video__video-container{
+            @include flex(center, row, nowrap, flex-start);
+            width: unset;
+            margin: 0 15px;
+            
+
+            .video-container__description{
+                width: 50%;
+                font-family: $Roboto-Condensed;
+                font-size: 18px;
+                line-height: 2;
+
+            }
+
+            .video-container__video-box{
+                width: 50%;
+                height: auto;                
+            }
+        }
+
+        
+    }
+
+    // @media (max-width: 1180px){
+
+    //     .lp-bts-container__legginsy{
+    //         .legginsy__carousel-container {
+    //             justify-content: flex-start;
+                
+    //         }
+    
+    //     }
+
+    // }
+
 }

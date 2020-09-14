@@ -307,7 +307,20 @@
           align-items: flex-start;
 }
 
-.lp-bts-container .kv-section {
+.lp-bts-container a {
+  text-decoration: none;
+  color: #000;
+}
+
+.lp-bts-container p {
+  margin: 0;
+}
+
+.lp-bts-container .hp-section__title {
+  margin-top: 20px;
+}
+
+.lp-bts-container .lp-bts-container__kv-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,7 +339,7 @@
           align-items: flex-start;
 }
 
-.lp-bts-container .kv-section .kv-section__main-kv {
+.lp-bts-container .lp-bts-container__kv-section .kv-section__main-kv {
   width: 100%;
   height: 400px;
   max-width: 1920px;
@@ -334,7 +347,6 @@
 }
 
 .lp-bts-container .carousel {
-  background-color: rgba(82, 82, 82, 0.246);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,10 +363,79 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  background-color: #fff;
+  position: relative;
 }
 
 .lp-bts-container .carousel .carousel-container__item {
-  width: 340px;
-  height: 450px;
-  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 280px;
+  height: 380px;
+  background-color: dimgray;
+  text-align: center;
+  margin: 0 10px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.lp-bts-container .carousel .carousel-container__item .item__title {
+  font-family: "Geomanist-BoldItalic", Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 40px;
+}
+
+.lp-bts-container .lp-bts-container__polecamy .polecamy__carousel-container .carousel-container__glider-container {
+  width: 100%;
+}
+
+.lp-bts-container .lp-bts-container__polecamy .polecamy__carousel-container .carousel-container__item {
+  height: 420px;
+}
+
+.lp-bts-container .lp-bts-container__video .video__video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: unset;
+  margin: 0 15px;
+}
+
+.lp-bts-container .lp-bts-container__video .video__video-container .video-container__description {
+  width: 50%;
+  font-family: "Roboto-Condensed", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.lp-bts-container .lp-bts-container__video .video__video-container .video-container__video-box {
+  width: 50%;
+  height: auto;
 }
