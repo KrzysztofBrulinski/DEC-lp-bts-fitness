@@ -1,0 +1,48 @@
+.lp-bts-container {
+
+    // background-color: #f6f7f7;
+    background-color: bisque;
+    margin: 0 auto;
+    position: relative;
+
+    @mixin flex($justify-content, $flex-direction, $flex-wrap, $items-align) {
+        display: flex;
+        justify-content: $justify-content;
+        width: 100%;
+        flex-direction: $flex-direction;
+        flex-wrap: $flex-wrap;
+        align-items: $items-align;
+
+    }
+
+    @include flex(center, column, wrap, flex-start);
+
+
+    .kv-section {
+        @include flex(center, column, wrap, flex-start);
+
+        .kv-section__main-kv{
+            width: 100%;
+            height: 400px;
+            max-width: 1920px;
+            text-align: center;
+        }
+    }
+
+    .carousel{
+        background-color: rgba(82, 82, 82, 0.246);
+        @include flex(center, row, nowrap, flex-start);
+
+        .carousel-container__item{
+            width: 340px;
+            height: 450px;
+            background-color: red;
+
+        }
+    }
+
+    .legginsy__carousel-container{
+
+
+    }
+}
