@@ -1,7 +1,5 @@
 .lp-bts-container {
 
-    // background-color: #f6f7f7;
-    background-color: bisque;
     margin: 0 auto;
     position: relative;
 
@@ -18,17 +16,85 @@
     @include flex(center, column, wrap, flex-start);
 
 
-    a{
+    a {
         text-decoration: none;
         color: #000;
     }
 
-    p{
+    p {
         margin: 0;
     }
 
-    .hp-section__title{
+    .hp-section__title {
         margin-top: 20px;
+    }
+
+    .carousel {
+        background-color: #fff;
+        position: relative;
+        padding: 30px 0;
+
+        .carousel-container__item {
+            @include flex(center, column, nowrap, center);
+
+            width: 280px;
+            height: 380px;
+            background-color: rgb(105, 105, 105);
+            text-align: center;
+            flex-shrink: 0;
+
+            .item__title {
+                font-family: $Geomanist-BoldItalic;
+                color: #fff;
+                font-size: 40px;
+            }
+
+        }
+    }
+
+    .show-more-products {
+        @include flex(flex-start, column, nowrap, center);
+        font-family: $Roboto-Condensed;
+        font-size: 1.25em;
+        background-color: #fff;
+        font-weight: bold;
+        color: #727374;
+        text-transform: uppercase;
+
+
+        a {
+            color: #727374;
+        }
+
+        &::before {
+            content: "";
+            width: 95%;
+            height: 2px;
+            background-color: #efefef;
+        }
+
+        .show-more-products__link {
+            @include flex(center, row, nowrap, center);
+            height: 100px;
+            width: 100%;
+
+
+            a {
+                transition: color 300ms ease-in-out;
+
+                &::after {
+                    content: "\E007";
+                    font-family: $DecathlonCube;
+                    padding-left: 8px;
+                    font-size: 1.3em;
+                }
+
+                &:hover {
+                    color: #1283c1;
+
+                }
+            }
+        }
     }
 
 
@@ -43,59 +109,17 @@
         }
     }
 
-    .carousel {
-        @include flex(center, row, nowrap, flex-start);
+
+    .lp-bts-container__video {
         background-color: #fff;
-        position: relative;
 
-        .carousel-container__item {
-            @include flex(center, column, nowrap, center);
-
-            width: 280px;
-            height: 380px;
-            background-color: rgb(105, 105, 105);
-            text-align: center;
-            margin: 0 10px;
-            flex-shrink: 0;
-
-            .item__title {
-                font-family: $Geomanist-BoldItalic;
-                color: #fff;
-                font-size: 40px;
-            }
-
-        }
-    }
-
-    .lp-bts-container__legginsy{
-        .legginsy__carousel-container {
-            
-        }
-
-    }
-
-    .lp-bts-container__polecamy{
-        .polecamy__carousel-container{
-
-            .carousel-container__glider-container{
-                width: 100%;
-            }
-
-
-            .carousel-container__item{
-                height: 420px;
-            }
-        }
-    }
-
-    .lp-bts-container__video{
-        .video__video-container{
+        .video__video-container {
             @include flex(center, row, nowrap, flex-start);
             width: unset;
             margin: 0 15px;
-            
 
-            .video-container__description{
+
+            .video-container__description {
                 width: 50%;
                 font-family: $Roboto-Condensed;
                 font-size: 18px;
@@ -103,25 +127,34 @@
 
             }
 
-            .video-container__video-box{
+            .video-container__video-box {
                 width: 50%;
-                height: auto;                
+                height: auto;
             }
         }
 
-        
+
     }
 
-    // @media (max-width: 1180px){
+    .lp-bts-container__cwicz {
 
-    //     .lp-bts-container__legginsy{
-    //         .legginsy__carousel-container {
-    //             justify-content: flex-start;
-                
-    //         }
-    
-    //     }
+        .cwicz__carousel-container {
 
-    // }
+            .carousel-container__glider-container {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 1180px) {
+
+        .lp-bts-container__legginsy {
+            .legginsy__carousel-container {
+                justify-content: flex-start;
+            }
+
+        }
+
+    }
 
 }
