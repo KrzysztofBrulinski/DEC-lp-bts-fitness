@@ -327,6 +327,13 @@
   text-shadow: 2px 2px #00000085;
 }
 
+.lp-bts-container .carousel-container__glider-container,
+.lp-bts-container .akcesoria__carousel-container,
+.lp-bts-container .zobacz-rowniez__carousel-container,
+.lp-bts-container .legginsy__carousel-container {
+  overflow: hidden;
+}
+
 .lp-bts-container .carousel {
   background-color: #fff;
   position: relative;
@@ -671,7 +678,7 @@
 .lp-bts-container .product-categories .product-categories__item img {
   max-width: 55px;
   max-height: 55px;
-  margin: 0 20px;
+  margin-right: 20px;
 }
 
 .lp-bts-container .product-categories .product-categories__item .item__title {
@@ -728,6 +735,12 @@
   width: 95%;
   height: 2px;
   background-color: #efefef;
+}
+
+.lp-bts-container .suplementy__carousel-container .carousel-container__items img {
+  max-width: 55px;
+  max-height: 55px;
+  margin-right: 20px;
 }
 
 .lp-bts-container .suplementy__carousel-container .carousel-container__items .item__items {
