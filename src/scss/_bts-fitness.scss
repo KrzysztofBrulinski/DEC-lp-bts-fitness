@@ -38,12 +38,12 @@
     }
 
 
-    .carousel-container__glider-container,
-    .akcesoria__carousel-container,
-    .zobacz-rowniez__carousel-container,
-    .legginsy__carousel-container{
-        overflow: hidden;
-    }
+    // .carousel-container__glider-container,
+    // .akcesoria__carousel-container,
+    // .zobacz-rowniez__carousel-container,
+    // .legginsy__carousel-container {
+    //     overflow: hidden;
+    // }
 
 
     .carousel {
@@ -187,6 +187,13 @@
                 margin-bottom: 20px;
                 position: relative;
                 padding: 0 20px;
+
+                span {
+                    position: relative;
+                    z-index: 1;
+                    padding: 5px 15px;
+                    padding-top: calc(5px + .1em);
+                }
             }
 
             p {
@@ -202,12 +209,11 @@
 
 
     .lp-bts-container__video {
-        background-color: #fff;
 
         .video__video-container {
             @include flex(center, row, nowrap, flex-start);
             width: unset;
-            margin: 0 15px;
+            background-color: #fff;
 
 
             .video-container__description {
@@ -215,12 +221,14 @@
                 font-family: $Roboto-Condensed;
                 font-size: 18px;
                 line-height: 2;
+                padding: 20px;
 
             }
 
             .video-container__video-box {
                 width: 50%;
                 height: auto;
+                padding: 20px;
             }
         }
 
@@ -256,13 +264,11 @@
             }
 
             img {
-                max-width: 55px;
-                max-height: 55px;
                 margin-right: 20px;
             }
 
             .item__title {
-                font-size: .875em;
+                font-size: 14px;
                 text-shadow: none;
             }
 
@@ -292,21 +298,25 @@
                 }
             }
 
-            img {
-                max-width: 55px;
-                max-height: 55px;
-                margin-right: 20px;
-            }
+
 
             .item__items {
-                @include flex(center, row, nowrap, center);
+                @include flex(flex-start, row, nowrap, center);
+
+                img {
+                    padding: 0 20px;
+
+                }
+
+                p {
+                    text-align: left;
+                    font-size: 14px;
+                    text-shadow: none;
+                    color: #000;
+                }
+
             }
 
-            p {
-                font-size: .875em;
-                text-shadow: none;
-                color: #000;
-            }
         }
 
     }
@@ -334,6 +344,14 @@
                 .video-container__video-box {
                     width: 100%;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 500px){
+        .kv-section__main-kv{
+            span{
+                font-size: 37px;
             }
         }
     }
