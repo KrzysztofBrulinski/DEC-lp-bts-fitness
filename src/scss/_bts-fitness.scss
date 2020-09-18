@@ -211,7 +211,7 @@
     .lp-bts-container__video {
 
         .video__video-container {
-            @include flex(center, row, nowrap, flex-start);
+            @include flex(center, row, nowrap, center);
             width: unset;
             background-color: #fff;
 
